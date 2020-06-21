@@ -1,0 +1,44 @@
+#include <Servo.h>
+ 
+int s1 = 9;
+ int s2 = 5;
+Servo servo1;  
+ Servo servo2;
+int angle1 = 0;   
+ int angle2=0;
+void setup()
+{
+  servo1.attach(s1);
+  servo2.attach(s2);
+}
+ 
+ 
+void loop()
+{
+  //servo one
+  for(angle1 = 0; angle1 < 180; angle1++)  
+  {                                  
+    servo1.write(angle1);               
+    delay(15);                   
+  }
+  
+ 
+  for(angle1 = 180; angle1 > 0; angle1--)    
+  {                                
+    servo1.write(angle1);           
+    delay(15);       
+  }
+  
+  //servo two
+  
+    for(angle2 = 0; angle2 < 180; angle2++)  
+  {                                  
+    servo2.write(angle2);               
+    delay(15);                   
+  }
+
+  for(angle2 = 180; angle2 > 0; angle2--)    
+  {                                
+    servo2.write(angle2);           
+    delay(15);       
+  }
